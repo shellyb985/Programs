@@ -42,14 +42,15 @@ public class Stopwatch{
     int i=2;
     Scanner scan=new Scanner(System.in);
     //Displaying start and stop
-    System.out.println("1.Start");
-    System.out.println("2.Stop");
+    System.out.print("1.Start : ");
     i=scan.nextInt();
     if(i==1){
+      System.out.print("2.Stop : ");
       timer();
     }
     else{
       System.out.println("Invalid Entry");
     }
+
   }
 }

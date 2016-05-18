@@ -16,7 +16,7 @@ public class Coupons{
   public static void main(String []args){
     int num,temp,temp1;
     //Creating arraylist
-    ArrayList<Integer> mylist= new ArrayList<Integer>(10);
+    ArrayList<Integer> mylist= new ArrayList<Integer>();
     Scanner scan=new Scanner(System.in);
     //Input no of distinct coupons
     System.out.print("Enter the total Distinct coupon : ");
@@ -47,6 +47,15 @@ public class Coupons{
     //Displaying all Coupons
     System.out.println("Coupon Numbers :");
     for(int i=0;i<mylist.size();i++){
+      if(mylist.get(i)<1000){
+        System.out.print("0");
+      }
+      if(mylist.get(i)<100){
+        System.out.print("0");
+      }
+      if(mylist.get(i)<10){
+        System.out.print("0");
+      }
       System.out.println(mylist.get(i));
     }
 

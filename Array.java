@@ -105,7 +105,7 @@ public class Array{
     for(int i=0;i<row;i++){
       //loop for col
       for(int j=0;j<col;j++){
-        pw.print("\t"+arrBool[i][j]+"   ");
+        pw.print("     "+arrBool[i][j]+"   ");
       }//End of for loop
       pw.println("");
     }//End of or loop

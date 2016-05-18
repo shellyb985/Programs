@@ -7,7 +7,7 @@ public class SortingClass{
   public int binarySearchInteger(ArrayList<Integer> arrayIntList,int sNum){
     int tNum=0;
     int low=0,up=arrayIntList.size()-1;
-    long startTime=System.currentTimeMillis();  //to find current time in milli second before loop
+    long startTime=System.nanoTime();  //to find current time in milli second before loop
     while(low<=up){
       int mid=(low+up)/2;
       if(sNum == arrayIntList.get(mid)){
@@ -21,7 +21,7 @@ public class SortingClass{
         low=mid+1;
       }
     }
-    long endTime=System.currentTimeMillis();  //to find current time in milli second before loop
+    long endTime=System.nanoTime();  //to find current time in milli second before loop
     if(tNum==1){
       System.out.println("NUMBER FOUND!!!");
     }
@@ -35,7 +35,7 @@ public class SortingClass{
 public int binarySearchString(ArrayList<String> arrayStringList,String sString){
   int tNum=0;
   int low=0,up=arrayStringList.size()-1;
-  long startTime=System.currentTimeMillis();  //to find current time in milli second
+  long startTime=System.nanoTime();  //to find current time in milli second
   while(low<=up){
     int mid=(up+low)/2;
     int check=sString.compareTo(arrayStringList.get(mid));
@@ -53,7 +53,7 @@ public int binarySearchString(ArrayList<String> arrayStringList,String sString){
       low=mid+1;
     }
   }
-  long endTime=System.currentTimeMillis();  //to find current time in milli second before loop
+  long endTime=System.nanoTime();  //to find current time in milli second before loop
   if(tNum==1){
     System.out.println("STRING FOUND!!!");
   }
@@ -66,7 +66,7 @@ public int binarySearchString(ArrayList<String> arrayStringList,String sString){
 //Bubble sort method for integer
 public int bubbleSortInt(ArrayList<Integer> arrayIntList){
   int size=arrayIntList.size(); //to find size of list
-  long startTime=System.currentTimeMillis();  //to find current time in milli second
+  long startTime=System.nanoTime();  //to find current time in milli second
   for(int i=size;i>0;i--){
     for(int j=0;j<size-1;j++){
       //Swap
@@ -78,7 +78,7 @@ public int bubbleSortInt(ArrayList<Integer> arrayIntList){
     }//End of for loop
     size--;
   }//End of for loop
-  long endTime=System.currentTimeMillis();  //to find current time in milli second before loop
+  long endTime=System.nanoTime();  //to find current time in milli second before loop
     System.out.println("Bubble sort method for integer");
   System.out.println(arrayIntList);
   return (int)(endTime-startTime); //return time elapsed
@@ -87,7 +87,7 @@ public int bubbleSortInt(ArrayList<Integer> arrayIntList){
 //String Bubble sort
 public int bubbleSortString(ArrayList<String> arrayStringList){
   int size=arrayStringList.size(); //to find size of array list
-  long startTime=System.currentTimeMillis();  //to find current time in milli second
+  long startTime=System.nanoTime();  //to find current time in milli second
   for(int i=size;i>0;i--){
     for(int j=0;j<size-1;j++){
       //swap
@@ -99,7 +99,7 @@ public int bubbleSortString(ArrayList<String> arrayStringList){
     }//End od for loop
     size--;
   }//End od for loop
-  long endTime=System.currentTimeMillis();  //to find current time in milli second before loop
+  long endTime=System.nanoTime();  //to find current time in milli second before loop
   System.out.println("String Bubble sort");
   System.out.println(arrayStringList);
   return (int)(endTime-startTime); //return time elapsed
@@ -109,7 +109,7 @@ public int bubbleSortString(ArrayList<String> arrayStringList){
 public int insertSortInt(ArrayList<Integer> arrayIntList){
   System.out.println("insert int");
   int size; //to find size of array List
-  long startTime=System.currentTimeMillis();  //to find current time in milli second
+  long startTime=System.nanoTime();  //to find current time in milli second
   for(int i=1;i<arrayIntList.size();i++){
     int j=i;
     //Swap
@@ -120,7 +120,7 @@ public int insertSortInt(ArrayList<Integer> arrayIntList){
       j--;
     }//End of while loop
   }//End of for loop
-  long endTime=System.currentTimeMillis();  //to find current time in milli second before loop
+  long endTime=System.nanoTime();  //to find current time in milli second before loop
   System.out.println("Integer Insertion sort");
   System.out.println(arrayIntList);
   return (int)(endTime-startTime); //return time elapsed
@@ -129,7 +129,7 @@ public int insertSortInt(ArrayList<Integer> arrayIntList){
 //String Insertion sort
 public int insertSortString(ArrayList<String> arrayStringList){
   int size=arrayStringList.size();
-  long startTime=System.currentTimeMillis();  //to find current time in milli second
+  long startTime=System.nanoTime();  //to find current time in milli second
   for(int i=1;i<size;i++){
     int j=i;
     //Swap
@@ -140,7 +140,7 @@ public int insertSortString(ArrayList<String> arrayStringList){
       j--;
     }//End of while loop
   }//End of for loop
-  long endTime=System.currentTimeMillis();  //to find current time in milli second before loop
+  long endTime=System.nanoTime();  //to find current time in milli second before loop
   System.out.println("String Insertion sort");
   System.out.println(arrayStringList);
   return (int)(endTime-startTime); //return time elapsed

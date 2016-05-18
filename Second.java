@@ -1,32 +1,36 @@
 import java.util.Scanner;
+import java.util.Random;
+import java.text.DecimalFormat;
 
 public class Second{
   public static void main(String []args){
-    Integer num,head=0,tail=0;
-    double ran;
+    int num,head=0,tail=0,tNum;
+    float result;
 
+    Random ranNum=new Random();
     Scanner scan=new Scanner(System.in);
+    DecimalFormat df=new DecimalFormat("##.##");
     //Input from user
-    System.out.println("Number of time to flip coin : ");
+    System.out.print("Number of time to flip coin : ");
     num=scan.nextInt();
     if(num<1){
       System.out.println("Invalid input");
       return;
     }
     for(int i=0;i<num;i++){
-      ran=(Math.random());
-      if(ran<0.5){
+      tNum=(ranNum.nextInt(10)); //Generating random numbers
+      if(tNum>=5){  //if random number is positive then increment tail count
         tail++;
       }
-      else{
+      else{ //if  number is negative increment head count
         head++;
       }
-       System.out.println("ran="+ran+" tail="+tail+" head="+head);
+       System.out.println("ran="+ranNum+" tail="+tail+" head="+head);
     }
     //calculating percentage
-    head=(100*head)/num;
-    System.out.println("Head Percentage : "+head+"%");
-    tail=(100*tail)/num;
-    System.out.println("Tail Percentage : "+tail+"%");
+    result=(float)(100*head)/num;
+    System.out.println("Head Percentage : "+df.format(result)+"%");
+    result=(float)(100*tail)/num;
+    System.out.println("Tail Percentage : "+df.format(result)+"%");
   }
 }

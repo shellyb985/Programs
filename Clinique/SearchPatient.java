@@ -1,36 +1,39 @@
-public class SearchDoctor{
+package com.bridgelabz;
+import com.bridgelabz.model.Patient;
+import java.util.ArrayList;
+public class SearchPatient{
 
-  //Search by Doctor Name
-  public Array<Patient> searchByName(ArrayList<Patient> patientList,string name){
-    ArrayList<Patient> tempPatientList=new Patient;
+  //Search by patient Name
+  public ArrayList<Patient> searchByName(ArrayList<Patient> patientList,String name){
+    ArrayList<Patient> tempPatientList=new ArrayList();
     for(int i=0;i<patientList.size();i++){
       if(name.equals(patientList.get(i).name)){
-        tempDoctorList.add(patientList.get(i))
+        tempPatientList.add(patientList.get(i));
       }
     }//End of for loop
-    return patientList;
+    return tempPatientList;
   }//End of method Search by name\
 //*****************************************************************************
-  //Search by Doctor Id
-  public Array<Patient> searchById(ArrayList<Patient> patientList,int id){
-    ArrayList<Patient> tempPatientList=new Patient;
+  //Search by patient Id
+  public ArrayList<Patient> searchById(ArrayList<Patient> patientList,int id){
+    ArrayList<Patient> tempPatientList=new ArrayList();
     for(int i=0;i<patientList.size();i++){
-      if(id.equals(patientList.get(i).id)){
-        tempPatientList.add(patientList.get(i))
+      if(id==(patientList.get(i).id)){
+        tempPatientList.add(patientList.get(i));
       }
     }//End of for loop
     return tempPatientList;
-  }//End of Search by Doctor ID
+  }//End of Search by patient ID
 //*************************************************************************************
-  //Search by Doctor mobile no
-  public Array<Patient> searchByName(ArrayList<Patient> patientList,String Specialization){
-    ArrayList<Patient> tempPatientList=new Doctor;
+  //Search by patient mobile no
+  public ArrayList<Patient> searchByMobNo(ArrayList<Patient> patientList,String tMob){
+    ArrayList<Patient> tempPatientList=new ArrayList();
     for(int i=0;i<patientList.size();i++){
-      if(Specialization.equals(patientList.get(i).mobno)){
-        tempPatientList.add(patientList.get(i))
+      if(tMob.equals(patientList.get(i).MobileNo)){
+        tempPatientList.add(patientList.get(i));
       }
     }//End of for loop
     return tempPatientList;
-  }//End of Search by Doctor ID
+  }//End of Search by patient ID
   //*******************************************************************************
-}//End of Doctor class
+}//End of search patient class

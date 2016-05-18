@@ -38,6 +38,6 @@ public class QuestionNum{
     //Converting string to Integer
     num=Integer.parseInt(args[0]);
     //calling find method
-    find(0,num);
+    find(0,num-1);
   }
 }

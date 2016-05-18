@@ -7,9 +7,9 @@ public class One{
 
     Scanner scan=new Scanner(System.in);
 
-    name=scan.nextLine();
+    name=scan.next();
     if(name.length() >= 3 ){
-      System.out.println("Hello "+name+", How are you?");
+      System.out.print("Hello "+name+", How are you?");
     }
     else{
       System.out.println("invalid name");

@@ -14,6 +14,12 @@ public class PrimeFactor{
     System.out.print("Enter the number : ");
     //Getting number to find prime factor
     num=scan.nextInt();
+    if(num<=0){
+      System.out.println("Invalid Input");
+      return ;
+    }
+
+    
     //Creating object for class PrimeFactor
     PrimeFactor Primeobj=new PrimeFactor();
     //Calling Primefun method
@@ -34,14 +40,14 @@ public class PrimeFactor{
       }
       n++;
     }
+    System.out.println("");
   }
   //method to check number is prime or not
   int prime(int num){
-    int n=num/2,flag=0;
+    int n=num/2;
     for(int i=2;i<=n;i++){
       //If number is not prime then return 0
       if(num%i==0){
-        flag=1;
         return 0;
       }
     }

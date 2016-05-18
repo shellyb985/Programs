@@ -56,11 +56,7 @@ public class MainClass{
                   String tString=scan.next();
                   arr[1]=sortobj.binarySearchString(arrayStringList,tString);//calling binary search integer method
                   //Displaying Output
-
-                  for(int i=0;i<6;i++){
-                    System.out.println(arr[i]);
-                  }
-                  //tIMEELAPED(arr);
+                  tIMEELAPED(arr);
 
                   break;
                   //Exit
@@ -74,36 +70,51 @@ public class MainClass{
 //***************************************************************************************************************************
   //this Method will print descending order based on time elapsed
   public static void tIMEELAPED(int[] arr){
-    System.out.println("in function");
-    int tNum=arr[0];
-    for(int i=6;i>0;i--){
-      for(int j=0;j<6 && arr[j]>0;j++){
-        if(tNum<arr[j]){
-          tNum=j;
-        }
-        switch(tNum){
-          case 0: System.out.println("Integer Binary Search and elapsed time : "+arr[tNum]);
-                  arr[tNum]=-1;
+
+      int tNum=0;
+      int tIndex=0;
+      int[] arrIndex={0,1,2,3,4,5};
+
+      for(int i=6;i>0;i--){
+        for(int j=0;j<5;j++){
+          //Swap
+          if(arr[j] > arr[j+1]){
+            int temp=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=temp;
+
+            temp=arrIndex[j];
+            arrIndex[j]=arrIndex[j+1];
+            arrIndex[j+1]=temp;
+
+          }//End of if condition
+        }//End of for loop
+      }
+
+      for(int j=0;j<6;j++){
+         int temp=arrIndex[j];
+        switch(temp){
+
+          case 0: System.out.println("Integer Binary Search and elapsed time\t: "+arr[j]);
+              //    arr[tIndex]=-1;
                   break;
-          case 1: System.out.println("String Binary Search and elapsed time : "+ arr[tNum]);
-                  arr[tNum]=-1;
+          case 1: System.out.println("String Binary Search and elapsed time\t: "+ arr[j]);
+              //    arr[tIndex]=-1;
                   break;
-          case 2: System.out.println("Integer insertion sort and elapsed time : "+arr[tNum]);
-                  arr[tNum]=-1;
+          case 2: System.out.println("Integer insertion sort and elapsed time\t: "+arr[j]);
+              //    arr[tIndex]=-1;
                   break;
-          case 3: System.out.println("String insertion sort and elapsed time : "+arr[tNum]);
-                  arr[tNum]=-1;
+          case 3: System.out.println("String insertion sort and elapsed time\t: "+arr[j]);
+              //    arr[tIndex]=-1;
                   break;
-          case 4: System.out.println("Integer Bubble Sort and elapsed time : "+arr[tNum]);
-                  arr[tNum]=-1;
+          case 4: System.out.println("Integer Bubble Sort and elapsed time\t: "+arr[j]);
+              //    arr[tIndex]=-1;
                   break;
-          case 5: System.out.println("String Bubble Sort and elapsed time : "+arr[tNum]);
-                  arr[tNum]=-1;
+          case 5: System.out.println("String Bubble Sort and elapsed time\t: "+arr[j]);
+              //    arr[tIndex]=-1;
                   break;
         }//End of switch statement
       }//End of for loop
-    }//End of for loop
-    System.out.println("Out fun");
   }//End of static function TIMEELAPED
   //**********************************************************************************************************
   public static ArrayList<Integer> getArrayElementInt(){
